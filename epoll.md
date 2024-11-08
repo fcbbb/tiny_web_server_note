@@ -31,7 +31,7 @@ struct epoll_event
 - EPOLLET： 将EPOLL设为边缘触发(Edge Triggered)模式，这是相对于水平触发(Level Triggered)来说的。
 - EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果还需要继续监听这个socket的话，需要再次把这个socket加入到EPOLL队列里
 
-1. 在一段超时时间内等待一组文件描述符上的事件
+3. 在一段超时时间内等待一组文件描述符上的事件
 ```
 int epoll_wait(int epfd struct epoll_event* events, int maxevents, int tiemout);
 ```
